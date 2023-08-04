@@ -12,7 +12,7 @@ if (!isset($_GET['comment_id'])) {
 }
 
 $comment_id = $_GET['comment_id'];
-$connect = mysqli_connect("127.0.0.1", "root", "as2580as", "db_board") or die("connect failed");
+$connect = mysqli_connect("localhost", "hs01", "1234", "db_board") or die("connect failed");
 $query_get_comment = "SELECT * FROM reply WHERE idx = $comment_id";
 $result_get_comment = $connect->query($query_get_comment);
 $row_comment = mysqli_fetch_assoc($result_get_comment);
