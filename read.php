@@ -130,7 +130,7 @@
             <td class="read_hit">조회수</td>
             <td class="read_hit2"><?php echo $rows['hit'] + 1 ?></td>
         </tr>
-            <td><a href="../../upload/<?php echo $rows['file'];?>" download><?php echo $rows['file']; ?></a></td>
+            <td><a href="./upload/<?php echo $rows['file'];?>" download><?php echo $rows['file']; ?></a></td>
         <tr>
 
         </tr>
