@@ -32,7 +32,7 @@
 <body>
     <?php
     
-    $connect = mysqli_connect("localhost", "hs01", "1234", "db_board") or die("connect failed");
+    $connect = mysqli_connect("127.0.0.1", "root", "as2580as", "db_board") or die("connect failed");
     $number = $_GET['number'];
     $query = "select title, content, date, id, file from board where number = $number";
     $result = $connect->query($query);

@@ -96,7 +96,7 @@
 
 <body>
     <?php
-    $connect = mysqli_connect("localhost", "hs01", "1234", "db_board") or die("connect failed");
+    $connect = mysqli_connect("127.0.0.1", "root", "as2580as", "db_board") or die("connect failed");
     $number = $_GET['number'];
     session_start();
     $query = "select title, content, date, hit, id, file from board where number = $number";
@@ -104,7 +104,7 @@
     $rows = mysqli_fetch_assoc($result);
 
     $hit = "update board set hit = hit + 1 where number = $number";
-    $connect->query($hit);  
+    $connect->query($hit);
 
     if(isset($_SESSION['userid'])) {
     ?><b><?php echo $_SESSION['userid']; ?></b>님 반갑습니다.

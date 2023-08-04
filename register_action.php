@@ -1,13 +1,13 @@
 <?php
 session_start();
-$connect = mysqli_connect("localhost", "hs01", "1234", "db_board") or die("connect failed");
+$connect = mysqli_connect("127.0.0.1", "root", "as2580as", "db_board") or die("connect failed");
 
 $id = $_POST['id'];
 $pw = $_POST['pw'];
 
 $date = date('Y-m-d H:i:s');
 
-
+// id 중복 확인
 $query1 = "SELECT * FROM member WHERE id = '$id'";
 $result1 = $connect->query($query1);
 $count = mysqli_num_rows($result1);
@@ -39,3 +39,4 @@ if ($count) {
 }
 mysqli_close($connect);
 ?>
+
