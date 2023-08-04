@@ -1,6 +1,6 @@
 <?php
 session_start();
-$connect = mysqli_connect("127.0.0.1", "root", "as2580as", "db_board") or die("connect failed");
+$connect = mysqli_connect("localhost", "hs01", "1234", "db_board") or die("connect failed");
 
 $id = $_POST['id'];
 $pw = $_POST['pw'];

@@ -94,7 +94,7 @@
     </form>
     
     <?php
-    $connect = mysqli_connect("127.0.0.1", "root", "as2580as", "db_board") or die("connect failed");
+    $connect = mysqli_connect("localhost", "hs01", "1234", "db_board") or die("connect failed");    
 
     if (isset($_GET['sort'])) {
     $sort = $_GET['sort'];
